@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_gravity="center"
+    android:gravity="center"
     tools:context=".MainActivity">
 
 
     <Button
-        android:layout_width="match_parent"
         android:id="@+id/btnShowToast"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:padding="20dp"
-        android:textSize="18dp"
         android:backgroundTint="#f7f"
-        android:text="showToast" />
-</RelativeLayout>
+        android:padding="20dp"
+        android:text="showToast"
+        android:textSize="18dp" />
+
+    <EditText
+        android:id="@+id/etUserMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your message"
+        android:layout_marginTop="40dp"
+        />
+
+    <Button
+        android:id="@+id/btnSendMessageToNextActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#f4f4"
+        android:text="Send data to next activity"/>
+</LinearLayout>
