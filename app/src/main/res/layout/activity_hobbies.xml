@@ -5,24 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="40dp"
     android:orientation="vertical"
-    tools:context=".activities.SecondActivity">
+    tools:context=".activities.HobbiesActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Second Activity"
-        android:textSize="30dp" />
+        android:gravity="center"
+        android:text="My Hobbies"
+        android:textSize="30sp" />
 
-    <TextView
-        android:id="@+id/txvUserMessage"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Hello"
-        android:textAlignment="center"
-        android:textColor="#0f0"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

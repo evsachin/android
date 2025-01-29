@@ -1,12 +1,12 @@
-package com.learngram.androidtuts
+package com.learngram.androidtuts.activities
 
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.learngram.androidtuts.R
+import com.learngram.androidtuts.showToast
 
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,11 +16,13 @@ class SecondActivity : AppCompatActivity() {
 
         val txvUserMessage = findViewById<TextView>(R.id.txvUserMessage)
 
-        val bundle : Bundle? = intent.extras
-        val msg = bundle!!.getString("user_message")
+        val bundle: Bundle? = intent.extras
 
-        Toast.makeText(this,msg,Toast.LENGTH_SHORT).show()
+        bundle?.let {
+            val msg = bundle.getString("user_message")
+            showToast(msg)
+            txvUserMessage.text = msg
+        }
 
-        txvUserMessage.text = msg
     }
 }

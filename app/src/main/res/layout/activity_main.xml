@@ -5,11 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp"
     android:layout_gravity="center"
     android:gravity="center"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".activities.MainActivity">
 
 
     <Button
@@ -25,16 +25,27 @@
         android:id="@+id/etUserMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your message"
         android:layout_marginTop="40dp"
-        />
+        android:hint="Enter your message" />
 
     <Button
         android:id="@+id/btnSendMessageToNextActivity"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#f4f4"
-        android:text="Send data to next activity"/>
+        android:backgroundTint="#000"
+        android:text="Send data to next activity" />
+
+    <Button
+        android:id="@+id/btnShareToOtherApps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Share to other apps" />
+
+    <Button
+        android:id="@+id/btnRecyclerViewDemo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recyler View Demo" />
 </LinearLayout>
